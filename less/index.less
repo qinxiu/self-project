@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@suColor:#fabc09;
+html {
+  font-size: 42.66666667px;
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 42.66666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 56.53333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 72px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+*,
+::before,::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input,textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+
+}
+/*头部*/
+.sn_layout {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.sn_search {
+  height: 90/100rem;
+  width: 100%;
+  background:@suColor;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  >[class^=icon_]{
+    width: 90/100rem;
+    height: 90/100rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+  }
+  >.icon_cate {
+    background-image: url("../images/icon_category.png");
+    background-size: 44/100rem 70/100rem;
+    left: 0;
+  }
+  >.icon_cart {
+    background-image: url("../images/icon_cart.png");
+    background-size: 63/100rem 68/100rem;
+    right: 0;
+  }
+  >form {
+    width: 100%;
+    height: 90/100rem;
+    padding:0 90/100rem;
+    position: relative;
+    >.icon_search {
+      width: 27/100rem;
+      height: 28/100rem;
+      background: url("../images/icon_search.png") no-repeat;
+      background-size: 27/100rem 28/100rem;
+      position: absolute;
+      left: 1rem;
+      top: 30/100rem;
+    }
+    input {
+      height: 60/100rem;
+      width: 100%;
+      margin-top: 15/100rem;
+      border-radius: 5/100rem;
+      background: rgba(255,255,255,.8);
+      font-size: 24/100rem;
+      padding-left: 45/100rem;
+    }
+  }
+}
+/*广告部分*/
+.sn_banner {
+  padding-top: 90/100rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  ul {
+    &:first-child {
+      width: 1000%;
+      -webkit-transform: translateX(-10%);
+      transform: translateX(-10%);
+      li {
+        float: left;
+        width: 10%;
+        a {
+          display: block;
+          width: 100%;
+         img {
+           display: block;
+           width: 100%;
+         }
+        }
+      }
+
+    }
+    &:last-child {
+      position: absolute;
+      right: 50/100rem;
+      bottom: 20/100rem;
+      li {
+        float: left;
+        margin-left: 12/100rem;
+        width: 12/100rem;
+        height: 12/100rem;
+        border-radius: 6/100rem;
+        background: #fff;
+        &.active {
+          background:@suColor;
+        }
+      }
+    }
+  }
+}
+/*nav 部分*/
+.sn_nav {
+  padding: 20/100rem;
+  width: 100%;
+  ul {
+    width: 100%;
+    li {
+      float: left;
+      width: 20%;
+      a {
+        display: block;
+        width: 100%;
+        img {
+          display: block;
+          width: 80/100rem;
+          height: 80/100rem;
+          margin: 0 auto;
+        }
+        p {
+          font-size: 24/100rem;
+          text-align: center;
+          padding:10/100rem 0;
+        }
+      }
+    }
+
+  }
+}
+/*尾部*/
+.sn_tab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1rem;
+  width: 100%;
+  padding-top: 10/100rem;
+  background: #fff;
+  border-top: 2/100rem solid #ccc;
+   ul {
+     width: 100%;
+     li {
+       float: left;
+       width: 20%;
+       a {
+         display: block;
+         width: 100%;
+         font-size: 20/100rem;
+         text-align: center;
+         &:hover {
+           color:@suColor;
+         }
+         .fa {
+           display: block;
+           font-size: 50/100rem;
+         }
+       }
+     }
+   }
+}
+
